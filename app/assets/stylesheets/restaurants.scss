@@ -1,0 +1,12 @@
+// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: #05A8AA;
+.title h1 {
+  text-align: center;
+}
+
+body {
+  background-color: $primary-color;
+}

@@ -1,0 +1,29 @@
+
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Find your restaurant</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<div class="content">
+    <div class="d-flex justify-content-center" style="height: 400px; background-color: rgba(5,168,170,0.1);">
+        <div style="width: 700px">
+          <h1 class="text-center">All Restaurant in our database !</h1>
+
+          <ul class="list-group list-group-flush">
+            <% @restaurants.each do |restaurant|%>
+              <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li>
+            <% end %>
+          </ul>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Add a new restaurants", new_restaurant_path, class: " text-center btn btn-primary text-justify"%>
+    </div>
+
+</div>
+
+
+

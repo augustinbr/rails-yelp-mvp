@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center" style="width: 200">
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @restaurant['name']  %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @restaurant['category'] %></h6>
+      <ul>
+        <% @restaurant.reviews.each do |review| %>
+          <li class="card-text"><%= review.content %></li>
+          <li class="card-text"><%= review.rating %></li>
+        <%end%>
+      </ul>
+      <%= link_to "Add a new review", new_restaurant_review_path(@restaurant['id']) %>
+    </div>
+  </div>
+
+</div>
+
